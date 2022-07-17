@@ -40,8 +40,10 @@ def TempFun(m):
         st_time = time.time()
     if m == "end":
         if st_time == 1:
+            print('Hii')
             text_label = tk.Label(root, text='First click on start button')
-            text_label.grid(row=9, column=1)
+            text_label.grid(row=9, column=1, columnspan=2)
+            return
         end_time = time.time()
         time_taken = end_time - st_time
         text_label = tk.Label(root, text=f'Time taken was {time_taken} seconds and wpm is {(character/5)/(time_taken/60)}', font=("Times", 24))
